@@ -1,0 +1,64 @@
+{
+  "type": "module",
+  "name": "@monkgooi/template-svelte-routify",
+  "description": "Starter template for building application with Svelte, Routify, TailwindCSS with DaisyUI",
+  "version": "0.1.0",
+  "scripts": {
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "build": "npm run build:validate && npm run build:clean && routify -b && vite build",
+    "build:validate": "svelte-check",
+    "build:clean": "rimraf dist .routify",
+    "serve:dev": "npm run build && routify -c vite:dev",
+    "serve:dist": "npm run build && routify -c vite:dist",
+    "vite:dev": "vite",
+    "vite:dist": "vite preview",
+    "release": "standard-version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:monkgooi/template-svelte-routify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/monkgooi/template-svelte-routify/issues"
+  },
+  "keywords": [
+    "svelte",
+    "routify",
+    "tailwindcss",
+    "template"
+  ],
+  "engines": {
+    "node": ">=12"
+  },
+  "author": "MonkGooi",
+  "license": "MIT",
+  "devDependencies": {
+    "@roxi/routify": "^2.18.8",
+    "@sveltejs/vite-plugin-svelte": "^1.0.5",
+    "@tailwindcss/typography": "^0.5.7",
+    "autoprefixer": "^10.4.9",
+    "cz-conventional-changelog": "^3.3.0",
+    "daisyui": "^2.27.0",
+    "eslint": "^8.23.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.5",
+    "eslint-plugin-promise": "^6.0.1",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.4.16",
+    "postcss-load-config": "^4.0.1",
+    "rimraf": "^3.0.2",
+    "standard-version": "^9.5.0",
+    "svelte": "^3.50.1",
+    "svelte-check": "^2.9.0",
+    "svelte-preprocess": "^4.10.7",
+    "tailwindcss": "^3.1.8",
+    "vite": "^3.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
